@@ -1,0 +1,17 @@
+.feedbackWidgetBtnList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.feedbackWidgetBtnList li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.feedbackWidgetBtn {
+  font-size: 18px;
+  padding: 4px 12px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+}

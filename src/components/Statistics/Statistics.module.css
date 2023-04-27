@@ -1,0 +1,10 @@
+.feedbackWidgetText {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.feedbackWidgetItem {
+  font-size: 24px;
+  line-height: 1.5;
+}
