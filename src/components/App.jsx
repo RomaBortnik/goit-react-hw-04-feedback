@@ -12,13 +12,13 @@ export const App = () => {
 
   const addFeedback = value => {
     if (value === 'good') {
-      setGood(good + 1);
+      setGood(prevValue => prevValue + 1);
     }
     if (value === 'neutral') {
-      setNeutral(neutral + 1);
+      setNeutral(prevValue => prevValue + 1);
     }
     if (value === 'bad') {
-      setBad(bad + 1);
+      setBad(prevValue => prevValue + 1);
     }
   };
 
