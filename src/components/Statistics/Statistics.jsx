@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 
 import css from './Statistics.module.css';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+const Statistics = ({ options, total, positivePercentage }) => {
+  const { good, neutral, bad } = options;
   const { feedbackWidgetText, feedbackWidgetItem } = css;
   return (
     <div>
@@ -21,9 +22,11 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
 };
 
 Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
+  options: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
   total: PropTypes.func.isRequired,
   positivePercentage: PropTypes.func.isRequired,
 };
