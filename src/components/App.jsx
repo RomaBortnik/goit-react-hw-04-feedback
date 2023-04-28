@@ -11,14 +11,21 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const addFeedback = value => {
-    if (value === 'good') {
-      setGood(prevValue => prevValue + 1);
-    }
-    if (value === 'neutral') {
-      setNeutral(prevValue => prevValue + 1);
-    }
-    if (value === 'bad') {
-      setBad(prevValue => prevValue + 1);
+    switch (value) {
+      case 'good':
+        setGood(prevValue => prevValue + 1);
+        break;
+
+      case 'neutral':
+        setNeutral(prevValue => prevValue + 1);
+        break;
+
+      case 'bad':
+        setBad(prevValue => prevValue + 1);
+        break;
+
+      default:
+        return;
     }
   };
 
